@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import RegistrationForm
+from .models import *
 
 # Create your views here.
 def home(request):
