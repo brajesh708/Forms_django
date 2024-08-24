@@ -12,6 +12,7 @@ def home(request):
             email=form.cleaned_data["email"]
             contact=form.cleaned_data["contact"]
             print(name,city,email,contact)
+            user=Student
             # data={"fname":fname,"lname":lname,"email":email,"contact":contact}
             # Registration.objects.create(fname=fname,lname=lname,email=email,contact=contact)
             form.save()
