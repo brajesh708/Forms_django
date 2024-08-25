@@ -1,4 +1,15 @@
+<h1> Ragistration From  </h1>
 
-<h1>Student From</h1>
-
-h2
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Submit</button>
+</form>
+{% if data %}
+   {% for  i in data %}
+   {{i.fname }}
+   {{i.lname}}
+   {{i.email}}
+   {{i.contact}}
+   {% endfor %}
+{% endif %}
