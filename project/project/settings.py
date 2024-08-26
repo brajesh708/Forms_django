@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'basic',
     'simpal',
     'fromyou',
+    'cratefrom',
 ]
 
 AUTHNTICATION_BACKENDS=[

@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/',admin.site.urls),
     path('simpal/',include('simpal.urls')),
     path('basic/',include('basic.urls')),
-    path('fromyou/',include('fromyou.urls'))
+    path('fromyou/',include('fromyou.urls')),
+    path('ceatefrom',include('cratefrom.urls'))
     
 ]
