@@ -4,7 +4,7 @@ from .views import *
 
 urlpatterns = [
     path('admin/',admin.site.urls),
-    path('',ragister_views,name='ragister'),
+    path('ragister',ragister_views,name='ragister'),
     path('login',login_views,name='login')
     
 ]
