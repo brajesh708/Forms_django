@@ -14,7 +14,7 @@
 #         }
 
 from django import forms
-from .models import StudentModel
+from .models import *
 
 class RegistrationForm(forms.ModelForm):
     confirm_password = forms.CharField(
@@ -43,3 +43,13 @@ class LoginForm(forms.ModelForm):
             'stu_email': forms.EmailInput(attrs={'class': 'form-control'}),
             'stu_password':forms.PasswordInput(attrs={'class': 'form-control'}),
         }
+      
+class StudentQuery(forms.ModelForm):        
+    class Meta:
+      model = StudentQuery
+      fields = ('stu_name', 'stu_email', 'stu_query')
+      widgets = {
+            'stu_name': forms.TextInput(attrs={'class': 'form-control'}),
+            'stu_email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'stu_query': forms.TextInput(attrs={'class': 'form-control'}),
+    }

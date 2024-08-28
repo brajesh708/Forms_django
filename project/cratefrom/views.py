@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-from .forms import RegistrationForm,LoginForm
-from .models import StudentModel
+from .forms import *
+from .models import *
 # Create your views here.
 
 def home(request):
@@ -47,7 +47,7 @@ def login(request):
                     }
                     return render(request,'dashboard.html',{'data':data})
                 else:
-                    msg = "Email & Password not matched"
+                    msg = " Password not matched"
                     return render(request,'login.html',{'form':form,'msg':msg})
             else:
                 msg = "Email not register so please register first"
