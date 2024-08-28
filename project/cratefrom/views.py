@@ -1,7 +1,6 @@
 from django.shortcuts import render
-
-from .forms import *
-from .models import *
+from .forms import RegistrationForm,LoginForm,QueryForm
+from .models import StudentModel,StudentQuery
 # Create your views here.
 
 def home(request):
@@ -39,15 +38,18 @@ def login(request):
                     email = user.stu_email
                     contact = user.stu_mobile
                     city = user.stu_city
+                    password = user.stu_password
                     data = {
                         'name':name,
                         'email':email,
                         'contact':contact,
-                        'city':city
+                        'city':city,
+                        'password':password
                     }
-                    return render(request,'dashboard.html',{'data':data})
+                    form1=QueryForm()
+                    return render(request,'dashboard.html',{'data':data,'query':form1})
                 else:
-                    msg = " Password not matched"
+                    msg = "Email & Password not matched"
                     return render(request,'login.html',{'form':form,'msg':msg})
             else:
                 msg = "Email not register so please register first"
