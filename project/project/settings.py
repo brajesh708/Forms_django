@@ -38,9 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'basic',
+    'cratefrom',
     'simpal',
     'fromyou',
-    'cratefrom',
 ]
 
 AUTHNTICATION_BACKENDS=[

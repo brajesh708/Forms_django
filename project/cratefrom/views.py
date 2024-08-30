@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from .forms import RegistrationForm,LoginForm,QueryForm
-from .models import StudentModel,StudentQuery
+from .forms import *
+from .models import *
 # Create your views here.
 
 def home(request):
